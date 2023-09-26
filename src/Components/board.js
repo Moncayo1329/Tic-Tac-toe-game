@@ -1,15 +1,13 @@
 import React from "react";
-import "./board.css" 
-import { Box } from "./Components/box"
+import "./board.css";
+import { Box } from "./box";
 
-export const Board = ({Board}) => {
-    
-        return (
-
-       <div>
-        <Box value="X" onClick={null} /></div>
-    )
-    
-    
-    
-    }
+export const Board = ({ board, onClick }) => {
+  return (
+    <div>
+      {board.map((value, idx) => {
+       return <Box  value={value} onClick={() => onClick(idx)} />
+})}
+    </div>
+  )
+}

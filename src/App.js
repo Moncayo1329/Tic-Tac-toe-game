@@ -10,10 +10,9 @@ const board = ["X", "X","X","X","X","X","X","X","X"]
   return (
     <div className="App">
      
-<Board board={board}/>
+<Board board={board} onClick={null} />
 
   
-
     </div>
   );
 }
